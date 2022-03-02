@@ -1,22 +1,24 @@
-import React from "react";
-import { StyleSheet, StatusBar, SafeAreaView } from "react-native";
-import Header from "./src/components/Header";
-import AlbumList from "./src/components/AlbumList";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
-const App = () => {
+export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar />
-      <Header />
-      <AlbumList />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text style={styles.text}>110919038陳尚琦</Text>
+      <StatusBar style="auto" />
+    </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#0ff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
+  text: {
+    fontSize: 64,
+    color: '#f00',
+  }
 });
-
-export default App;
